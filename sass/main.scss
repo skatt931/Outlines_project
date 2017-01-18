@@ -4,17 +4,53 @@
 
 
 body {
-	font-size: 16px;
+	font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: bold;
 	min-width: 320px;
 	position: relative;
 	line-height: 1.6;
 	font-family: "RobotoRegular", sans-serif;
 	overflow-x: hidden;
+  color: white;
+  text-align: center;
+  vertical-align: bottom;
+}
+a {
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+	color: $hover;
+	text-decoration: none;
+	transition: 1s;
+  }
 }
 .hidden {
 	display: none;
 }
-
+header {
+  height: 700px;
+  width: 100%;
+}
+.head-nav {
+  width: 90%;
+  margin: 30px auto;
+}
+.square {
+  margin: 10px;
+  height: 35px;
+  width: 120px;
+  border: 1px solid white;
+  padding-top: 8px;
+  &:first-child{
+	margin-right: 18%;
+	width: 35px;
+  }
+  &:last-child {
+	margin-left: 18%;
+	width: 35px;
+  }
+}
 
 
 //ALWAYS END
