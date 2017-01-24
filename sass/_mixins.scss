@@ -1,0 +1,18 @@
+@mixin square($color, $text-color){
+    border: 1px solid $text-color;
+    padding: 10px 20px;
+    color: $text-color;
+    cursor: pointer;
+    &:hover {
+      color: $color;
+      text-decoration: none;
+      border: 1px solid $color;
+      transition: 1s;
+    }
+}
+
+@mixin text-decor($color, $size, $weight) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight
+}

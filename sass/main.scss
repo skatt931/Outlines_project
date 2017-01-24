@@ -1,57 +1,54 @@
 @import 'variables';
 @import 'mixins';
 
-
-
 body {
-	font-size: 11px;
+  font-size: 11px;
   letter-spacing: 3px;
   font-weight: bold;
-	min-width: 320px;
-	position: relative;
-	line-height: 1.6;
-	font-family: "RobotoRegular", sans-serif;
-	overflow-x: hidden;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.6;
+  font-family: "RobotoRegular", sans-serif;
+  overflow-x: hidden;
   color: white;
   text-align: center;
   vertical-align: bottom;
 }
-a {
-  color: #fff;
-  cursor: pointer;
-  &:hover {
-	color: $hover;
-	text-decoration: none;
-	transition: 1s;
-  }
-}
+
 .hidden {
-	display: none;
+  display: none;
 }
+
 header {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 50px 0;
   height: 700px;
   width: 100%;
-}
-.head-nav {
-  width: 90%;
-  margin: 30px auto;
-}
-.square {
-  margin: 10px;
-  height: 35px;
-  width: 120px;
-  border: 1px solid white;
-  padding-top: 8px;
-  &:first-child{
-	margin-right: 18%;
-	width: 35px;
+  padding: 40px;
+  ul {
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0 200px 0 160px;
+    li {
+      margin: 0 10px 0 10px;
+    }
   }
-  &:last-child {
-	margin-left: 18%;
-	width: 35px;
+  .square {
+    @include square($hover, white);
+  }
+  #logo {
+    margin-top: 200px;
+    max-width: 500px;
   }
 }
 
+div.text-block {
+  @include text-decor($h-text, 16px, 100);
+  .square {
+    @include square($h-text+30, $h-text)
+  }
+}
 
 //ALWAYS END
 @import 'media';
